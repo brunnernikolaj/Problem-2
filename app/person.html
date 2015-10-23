@@ -1,0 +1,33 @@
+
+<div class="container" style="margin-top: 40px;">
+    <h1>Person List</h1>
+
+    <h2>Number of persons: {{persons.length}}</h2>
+
+    <div class="row">
+        <div class="col-md-6">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <td>Name</td>
+                        <td>Age</td>
+                        <td>Details</td>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr ng-repeat="person in persons">
+                        <td>{{person.name}}</td>
+                        <td>{{person.age}}</td>
+                        <td><a ui-sref="person.details({id:person.id})" >{{person.id}}</a></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="col-md-6">
+
+            <div ui-view></div>
+        </div>
+    </div>
+</div>
+
